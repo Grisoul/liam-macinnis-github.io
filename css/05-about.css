@@ -1,0 +1,95 @@
+/* ======================================================= */
+/* ==================== About Section ==================== */
+/* ======================================================= */
+section.about {
+    width: 100%;
+    justify-items: center;
+}
+
+section.about .about-container{
+    width: 100%;
+    min-height: 550px;
+    
+}
+
+section.about h1 {
+    text-align: center;
+    padding-top: 1.5rem;
+    line-height: 50%;
+}
+
+section.about hr {
+    justify-self: center;
+}
+
+section.about .about-sections-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+    height: 100%;
+}
+
+.about-left {
+    width: 45%;
+    margin-right: 5%;
+
+    padding-top: 1.5rem;
+}
+
+.about-left p {
+    text-align: left;
+    font-size: 24px;
+    text-align: justify;
+}
+
+.about-right {
+    width: 45%;
+    margin-left: 5%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    padding: 1rem;
+}
+
+.about-right .pill {
+    background-color: var(--bg-main);
+    
+    border-radius: 25px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--text-muted);
+
+    padding: 0.25rem 0.75rem 0.25rem 0.75rem
+}
+
+.about-right .pill.total{
+    grid-column: 1 / 3;
+}
+
+.about-right .pill h4, p {
+    text-align: center;
+}
+
+.about-right .pill h4 {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+}
+
+.about-right .pill h4 span.material-symbols-outlined{
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.about-right .pill p {
+    font-size: 16px;
+    color: var(--text-muted)
+}

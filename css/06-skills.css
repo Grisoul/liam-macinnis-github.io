@@ -1,0 +1,88 @@
+/* ======================================================= */
+/* =================== Skills Section ==================== */
+/* ======================================================= */
+section.skills {
+    width: 100%;
+    justify-items: center;
+}
+
+section.skills h1 {
+    padding-top: 1rem;
+    line-height: 50%;
+}
+
+section.skills hr {
+    justify-self: center;
+    width: 85px;
+}
+
+section.skills .skills-container{
+    width: 100%;
+    min-height: 595px;
+}
+
+section.skills h1 {
+    text-align: center;
+}
+
+section.skills .skills-list {
+    width: 90%;
+    justify-self: center;
+}
+
+section.skills .skills-list ul {
+    all: unset;
+    margin: 0 auto;
+    padding: 0;
+
+
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    justify-items: center;
+    align-items: start;
+
+    
+    gap: 25px;
+}
+
+section.skills .skills-list li {
+    all: unset;
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--bg-main);
+    border-radius: 25px;
+
+    border-color: var(--text-muted);
+    border-style: solid;
+    border-width: 1px;
+
+    height: 225px;
+    width: 100%;
+
+    transition: border-color 0.5s ease,
+    transform 0.5s ease;
+}
+
+section.skills .skills-list li:hover {
+    transform: scale(1.025);
+    border-color: var(--border-red);
+}
+
+section.skills .skills-list li h3 {
+    text-align: center;
+}
+
+section.skills .skills-list li p {
+    text-align: left;
+    margin: 1rem 1rem 0rem 1rem;
+}
+
+section.skills .skills-list hr {
+    height: 0;
+    border: 0;
+    border-top: 2px solid var(--text-muted);
+    width: 80%
+}

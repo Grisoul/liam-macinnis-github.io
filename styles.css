@@ -1,0 +1,766 @@
+/* ========================================================= */
+/* ==================== Global Stylings ==================== */
+/* ========================================================= */
+:root {
+    /* Colour Variables */
+    --bg-main: #141212;
+    --bg-card: #2A2A30;
+    --border-subtle: #4A4A56;
+    --border-red: #cc3345;
+
+    --nav-main: rgba(20, 18, 18, 0.82);
+
+    --btn-dark: #2E1B18;
+
+    --text-main: #F5E9D9;
+    --text-secondary: #8e8680;
+    --text-muted: #C9C0B8;
+
+    --accent: #FF4A2B;
+    --accent-soft: #FF7A45;
+
+    /* Margin Variables */
+    
+
+
+    /* Padding Variables */
+}
+
+.lightmode {
+    --bg-main: #f5f5f7;
+    --bg-card: #ffffff;
+    --border-subtle: #d0d0dd;
+    --border-red: #cc3345;
+
+    --nav-main: rgba(245, 245, 257, 0.82);
+
+    --btn-dark: #f0e7dd;
+
+    --text-main: #1c1c1f;
+    --text-secondary: #555;
+    --text-muted: #777;
+
+    --accent: #FF4A2B;
+    --accent-soft: #FF7A45;
+}
+
+#theme-switch{
+    height: 2.25rem;
+    width: 2.25rem;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--bg-main);
+    border-color: var(--bg-card);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+body, header, section, footer,
+button, a, p, h1, h2, h3, h4, h5, h6,
+.project-pill, .pill {
+  transition:
+    background-color 250ms ease,
+    color 250ms ease,
+    border-color 250ms ease,
+    box-shadow 250ms ease;
+}
+
+#theme-switch svg {
+    fill: var(--text-muted);
+}
+
+#theme-switch svg:last-child {
+    display: none;
+}
+
+.lightmode #theme-switch svg:first-child {
+    display: none;
+}
+
+.lightmode #theme-switch svg:last-child {
+    display: block;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Jost', sans-serif;
+}
+
+* { 
+    box-sizing: border-box; 
+    font-family: 'Jost', sans-serif;
+    
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+}
+
+/* ========================================================== */
+/* ==================== Navbar and Title ==================== */
+/* ========================================================== */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 75px;
+
+    padding: 0 2rem 0 2rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--nav-main);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); 
+
+    border-bottom: solid 1px var(--text-muted);
+
+}
+
+header .logo h3 { margin: 0; }
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+header nav a {
+    display: inline-block;
+    position: relative;
+
+    padding: 0.25rem 0 0.25rem 0;
+
+    color: var(--text-muted);
+    font-size: 18px;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+header nav a:hover,
+header nav a:focus-visible {
+    color: var(--text-main);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transform: translateY(-3px) scale(1.05);
+}
+
+header nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+
+    width: 100%;
+    height: 2px;
+
+    border-radius: 999px;
+
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        var(--border-red) 15%, 
+        yellow 50%,
+        var(--border-red) 85%,
+        transparent 100%
+        );
+
+    box-shadow: 
+        0 0 12px rgba(255, 180, 80, 0.7),
+        0 0 24px rgba(255, 74, 43, 0.5);
+  
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center; 
+    transition: transform 0.2s ease-out;
+
+}
+
+header nav a:hover::after,
+header nav a:focus-visible::after  {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* =================================================== */
+/* ==================== Container ==================== */
+/* =================================================== */
+main.container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content-wrapper {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+/* ====================================================== */
+/* ==================== Hero Section ==================== */
+/* ====================================================== */
+section.hero {
+    width: 100%;
+
+    margin-bottom: 6rem;
+    padding-top: 6rem;
+}
+
+section.hero .hero-container{
+    width: 100%;
+    min-height: 440px;
+    
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* ======================= Left Hero Section ======================= */
+section.hero .left-hero {
+    width: 50%;
+    margin: auto;
+}
+
+section.hero .left-hero h4 {
+    font-size: 48px;
+    margin: 0;
+
+    color: var(--text-main);
+}
+
+section.hero .left-hero h6 {
+    font-size: 32px;
+    margin: 0 0 2.5rem 0;
+
+    color: var(--text-secondary);
+}
+
+/* Animated Text Section Start */
+section.hero .left-hero h6 span#imatext{
+    color: var(--border-red);
+}
+
+section.hero .left-hero h6 span.cursor {
+    color: var(--text-secondary);
+    font-weight: lighter;
+}
+
+section.hero .left-hero h6 span.cursor.blink {
+    animation: blink 0.75s infinite;
+}
+
+@keyframes blink {
+    0%, 50% {opacity: 1;}
+    50.01%, 100% {opacity: 0;}
+}
+/* Animated Text Section End */
+
+section.hero .left-hero p {
+    margin: 0 0 2.5rem 0;
+    
+    font-size: 22px;
+    text-align: left;
+}
+
+section.hero .left-hero .hero-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+section.hero .left-hero .hero-buttons button{
+    font-weight: bold;
+
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    border-radius: 25px;
+    border-width: 3px;
+    border-style: solid;
+
+    cursor: pointer;
+
+    transition: transform 0.1s ease;
+}
+
+section.hero .left-hero .hero-buttons button:active{
+    transform: scale(0.95);
+}
+
+/* Specify hero button styles and animatinos */
+section.hero .left-hero .hero-buttons button.resume{
+    color: var(--text-main);
+    background-color: var(--btn-dark);
+    border-color: var(--border-red);
+
+    transition: background-color 0.1s ease,
+    border-color 0.1s ease;
+}
+
+section.hero .left-hero .hero-buttons button.github{
+    color: var(--text-main);
+    background-color: var(--border-red);
+    border-color: var(--btn-dark);
+
+    transition: background-color 0.1s ease,
+    border-color 0.1s ease;
+}
+
+/* Animate the two buttons to change colour to opposites of one another */
+section.hero .left-hero .hero-buttons button.resume:active{
+    background-color: var(--border-red);
+    border-color: var(--btn-dark);
+}
+
+section.hero .left-hero .hero-buttons button.github:active{
+    background-color: var(--btn-dark);
+    border-color: var(--border-red);
+}
+
+
+/* ======================= Right Hero Section ======================= */
+section.hero .right-hero {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.hero .right-hero img {
+    height: 440px;
+    width: 360px;   
+
+    border-radius: 60px;
+
+    border: 5px solid transparent; 
+    background: linear-gradient(white, white) padding-box,
+              linear-gradient(to right top, var(--border-red) 25%, yellow 50%, var(--border-red) 75%) border-box;
+}
+
+/* ======================================================= */
+/* ==================== About Section ==================== */
+/* ======================================================= */
+section.about {
+    width: 100%;
+    justify-items: center;
+
+    padding-top: 0.2rem;
+    margin-bottom: 6rem;
+
+    /* background-color: #181414; */
+}
+
+section.about .about-container{
+    width: 100%;
+    min-height: 550px;
+    
+}
+
+section.about h1 {
+    text-align: center;
+    padding-top: 1.5rem;
+    line-height: 50%;
+}
+
+section.about hr {
+    justify-self: center;
+    margin-bottom: 1rem;
+}
+
+section.about .about-sections-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+    height: 100%;
+}
+
+.about-left {
+    width: 45%;
+    margin-right: 5%;
+}
+
+.about-left p {
+    text-align: left;
+    font-size: 24px;
+    text-align: justify;
+}
+
+.about-right {
+    width: 45%;
+    margin-left: 5%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    padding: 1rem;
+}
+
+.about-right .pill {
+    background-color: var(--bg-main);
+    
+    border-radius: 25px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--text-muted);
+
+    padding: 0.25rem 0.75rem 0.25rem 0.75rem
+}
+
+.about-right .pill.total{
+    grid-column: 1 / 3;
+}
+
+.about-right .pill h4, p {
+    text-align: center;
+}
+
+.about-right .pill h4 {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+    /* text-shadow: 3px 3px var(--bg-main); */
+}
+
+/* .about-right .pill hr {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 999px;
+    border-color: var(--text-main);
+    width: 20%;
+
+    margin-top: 0;
+    margin-bottom: 0;
+} */
+
+.about-right .pill p {
+    font-size: 16px;
+    color: var(--text-muted)
+}
+
+/* ======================================================= */
+/* =================== Skills Section ==================== */
+/* ======================================================= */
+section.skills {
+    width: 100%;
+    justify-items: center;
+
+    margin-bottom: 6rem;
+    padding-top: 0.2rem;
+}
+
+section.skills h1 {
+    padding-top: 1rem;
+    line-height: 50%;
+}
+
+section.skills hr {
+    justify-self: center;
+    margin-bottom: 1.5rem;
+    width: 85px;
+}
+
+section.skills .skills-container{
+    width: 100%;
+    min-height: 595px;
+}
+
+section.skills h1 {
+    text-align: center;
+}
+
+section.skills .skills-list {
+    width: 90%;
+    justify-self: center;
+}
+
+section.skills .skills-list ul {
+    all: unset;
+    margin: 0 auto;
+    padding: 0;
+
+
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    justify-items: center;
+    align-items: start;
+
+    
+    gap: 25px;
+}
+
+section.skills .skills-list li {
+    all: unset;
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--bg-main);
+    border-radius: 25px;
+
+    border-color: var(--text-muted);
+    border-style: solid;
+    border-width: 1px;
+
+    height: 225px;
+    width: 100%;
+
+    transition: border-color 0.5s ease,
+    transform 0.5s ease;
+}
+
+section.skills .skills-list li:hover {
+    transform: scale(1.025);
+    border-color: var(--border-red);
+}
+
+section.skills .skills-list li h3 {
+    text-align: center;
+}
+
+section.skills .skills-list li p {
+    text-align: left;
+    margin: 1rem 1rem 0rem 1rem;
+}
+
+section.skills .skills-list hr {
+    height: 0;
+    border: 0;
+    border-top: 2px solid var(--text-muted);
+    width: 80%
+}
+
+/* ========================================================== */
+/* ==================== Projects Section ==================== */
+/* ========================================================== */
+section.projects {
+    width: 100%;
+    justify-items: center;
+    margin-bottom: 6rem;
+    padding-top: 0.2rem;
+}
+
+section.projects h1 {
+    padding-top: 1rem;
+    line-height: 50%;
+}
+
+section.projects hr {
+    justify-self: center;
+    margin-bottom: 1.5rem;
+    width: 130px;
+}
+
+section.projects .projects-container{
+    width: 100%;
+    min-height: 645px;
+
+}
+
+section.projects h1{
+    text-align: center;
+}
+
+section.projects .projects-list ul {
+    all: unset;
+    margin: 0 auto;
+    padding: 0;
+
+
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    /* place-items: center; */
+    justify-items: center;
+    align-items: start;
+
+    
+    gap: 25px;
+}
+
+section.projects .projects-list li {
+    all: unset;
+    margin: 0;
+    padding: 0;
+}
+
+section.projects .projects-list .project-pill {
+    background-color: var(--bg-main);
+
+    border-radius: 25px;
+    border-style: solid;
+    border-color: var(--text-muted);
+    border-width: 1px;
+    overflow: hidden;
+
+    height: 560px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.projects .projects-list .project-pill img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+section.projects .projects-list .project-pill img:hover {
+    transform: scale(1.05) translateY(-4px);
+}
+
+section.projects .projects-list .project-pill .project-info {
+    width: 95%;
+    justify-self: center;
+}
+
+section.projects .projects-list .project-pill .project-info h4 {
+    text-align: left;
+    margin: 0.5rem 0 0 0;
+}
+
+section.projects .projects-list .project-pill .project-info p {
+    text-align: left;
+}
+
+section.projects .projects-list .project-pill .related-skills {
+    width: 95%;
+    justify-self: center;
+}
+
+section.projects .projects-list .project-pill .related-skills p {
+    text-align: justify;
+}
+
+section.projects .projects-list .project-pill button {
+    all: unset;
+
+    font-weight: bold;
+
+    border-radius: 25px;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+
+    transition: transform 0.15s ease;
+
+    color: var(--text-muted);
+    background-color: var(--bg-card);
+    border: solid 3px var(--border-subtle);
+}
+
+section.projects .projects-list .project-pill button:active{
+    transform: scale(0.95);
+}
+
+
+/* ================================================================ */
+/* ==================== Footer Contact Section ==================== */
+/* ================================================================ */
+footer {
+    width: 100%;
+    min-height: 290px;
+    background-color: var(--bg-main);
+
+    justify-items: center;
+
+    border-top: solid 1px var(--text-muted)
+}
+
+footer h1 {
+    padding: 2rem 0 0 0;
+}
+
+footer h3 {
+    color: var(--text-muted);
+}
+
+footer div {
+    padding-bottom: 2rem;
+}
+
+footer div button{
+    all: unset;
+
+    font-weight: bold;
+
+    margin-right: 1rem;
+    border-radius: 25px;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+
+    transition: transform 0.15s ease;
+
+    color: var(--text-muted);
+    background-color: var(--bg-main);
+    border: solid 3px var(--text-muted);
+}
+
+footer div button:active{
+    transform: scale(0.95);
+}
+
+/* =============================================================== */
+/* ======================= General Styling ======================= */
+/* =============================================================== */
+hr.fancyhr {
+    border: none;
+    height: 2px;
+    width: 150px;
+    margin: 1.25rem 0;
+
+    border-radius: 999px;
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        var(--border-red) 25%, 
+        yellow 50%,
+        var(--border-red) 75%,
+        transparent 100%
+        );
+
+    box-shadow: 
+        0 0 12px rgba(255, 180, 80, 0.7),
+        0 0 24px rgba(255, 74, 43, 0.5);
+}
+
+
+span.name-gradient{
+    background-image: linear-gradient(
+        to bottom right,
+        var(--border-red) 40%, 
+        yellow 75%
+        );
+    color: transparent;
+    background-clip: text;
+}

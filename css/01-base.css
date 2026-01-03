@@ -1,0 +1,127 @@
+/* ========================================================= */
+/* ==================== Global Stylings ==================== */
+/* ========================================================= */
+:root {
+    /* Colour Variables */
+    --bg-main: #141212;
+    --bg-card: #2A2A30;
+    --border-subtle: #4A4A56;
+    --border-red: #cc3345;
+    --border-yellow: yellow;
+
+    --nav-main: rgba(20, 18, 18, 0.82);
+
+    --btn-dark: #2E1B18;
+
+    --text-main: #F5E9D9;
+    --text-secondary: #8e8680;
+    --text-muted: #C9C0B8;
+
+    --accent: #FF4A2B;
+    --accent-soft: #FF7A45;
+
+    /* Margin Variables */
+    --section-bottom-margin: 10rem;
+    --hr-bottom-margin: 3rem;
+
+    --p-default-margin: 0.5rem;
+    --h-default-margin: 1rem;
+
+
+    /* Padding Variables */
+}
+
+.lightmode {
+    --bg-main: #fafafa;
+    --bg-card: #ffffff;
+    --border-subtle: #d0d0dd;
+    --border-red: #9f1d2d;
+    /* --border-yellow: #ca8a04; */
+    --border-yellow: #f97316;
+
+    --nav-main: rgba(245, 245, 257, 0.82);
+
+    --btn-dark: #f0e7dd;
+
+    --text-main: #1c1c1f;
+    --text-secondary: #555;
+    --text-muted: #777;
+
+    --accent: #FF4A2B;
+    --accent-soft: #FF7A45;
+}
+
+#theme-switch{
+    height: 2.25rem;
+    width: 2.25rem;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--bg-main);
+    border-color: var(--bg-card);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+body, header, section, footer,
+button, a, p, h1, h2, h3, h4, h5, h6,
+.project-pill, .pill {
+  transition:
+    background-color 250ms ease,
+    color 250ms ease,
+    border-color 250ms ease,
+    box-shadow 250ms ease;
+}
+
+#theme-switch svg {
+    fill: var(--text-muted);
+}
+
+#theme-switch svg:last-child {
+    display: none;
+}
+
+.lightmode #theme-switch svg:first-child {
+    display: none;
+}
+
+.lightmode #theme-switch svg:last-child {
+    display: block;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Jost', sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+}
+
+main > section {
+    margin-bottom: var(--section-bottom-margin);
+}
+
+/* Typography */
+p {
+    margin: var(--p-default-margin);
+}
+
+h1 h2 h3 h4 h5 h6 {
+    margin: var(--h-default-margin);
+}

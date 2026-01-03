@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- <link rel="stylesheet" href="styles.css"> -->
+         <link rel="stylesheet" href="css/01-base.css">
+         <link rel="stylesheet" href="css/02-header-nav.css">
+         <link rel="stylesheet" href="css/03-container.css">
+         <link rel="stylesheet" href="css/04-hero.css">
+         <link rel="stylesheet" href="css/05-about.css">
+         <link rel="stylesheet" href="css/06-skills.css">
+         <link rel="stylesheet" href="css/07-projects.css">
+         <link rel="stylesheet" href="css/08-footer-contact.css">
+         <link rel="stylesheet" href="css/99-utils.css">
+
+
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+        <script src="script.js" defer></script>
+        <script src="themeswitch.js" defer></script>
+    </head>
+    
+    <body>
+    <!-- Navigation -->
+    <header>
+        <div class="logo">
+            <h3>Liam MacInnis</h3>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <button id="theme-switch">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container">
+
+
+        <!-- Hero -->
+        <section id="home" class="hero">
+            <div class="hero-container content-wrapper">
+                <div class="left-hero">
+                    <h4>Hello, I'm <span class="name-gradient">Liam MacInnis</span></h4>
+                    <h6>I'm a <span id= "imatext"></span><span class="cursor">|</span></h6>
+                    <p>Welcome to my portfolio website where you will find my work and skills</p>
+                    <div class="hero-buttons">
+                        <button href="#" class="resume">Resume</button>
+                        <button href="#" class="github">GitHub</button>
+                    </div>
+                </div>
+        
+                <div class="right-hero">
+                    <img src="images/me.jpg" alt="Picture of Me">
+                </div>
+            </div>
+        </section>
+
+    <!-- About Me -->
+    <section id="about" class="about">
+        <div class="about-container content-wrapper">
+
+            <h1>About Me</h1>
+            <hr class="fancyhr section-divider">
+            
+            <div class="about-sections-container">
+                <div class="about-left">
+                    <p><b><span class="name-gradient">Hi, I’m Liam</span></b> — a Computer Science student specializing in Data Analytics. <br><br>
+
+                        I’m passionate about uncovering meaningful insights from data and building clean, functional solutions. <br><br>
+                        
+                        I love working on projects that bridge technical problem-solving with real-world impact, and I’m always looking for opportunities to learn, collaborate, and grow as a developer and analyst.</p>
+                </div>
+                <div class="about-right">
+                    <div class="pill single">
+                        <h4>
+                            <span class="material-symbols-outlined">
+                            school
+                            </span>
+                            Education
+                        </h4>
+                        <p>Sheridan College<br>Computer Science</p>
+                    </div>
+
+                    <div class="pill single">
+                        <h4>
+                            <span class="material-symbols-outlined">
+                            location_on
+                            </span>
+                            Location
+                        </h4>
+                        <p>Mississauga, Ontario Canada</p>
+                    </div>
+
+                    <div class="pill total">
+                        <h4>
+                            <span class="material-symbols-outlined">
+                            award_star
+                            </span>
+                            Degrees
+                        </h4>
+                        <p>Advanced Diploma in Software Design and Network Engineering<br><br> Honours Baccalaureate of Computer Science Specializing in Data Analytics</p>
+                    </div>
+
+                    <div class="pill total">
+                        <h4>
+                            <span class="material-symbols-outlined">
+                            mail
+                            </span>
+                            Contact
+                        </h4>
+                        <p>macinnisliam@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills">
+        <div class="skills-container content-wrapper">
+            <h1>Skills</h1>
+            <hr class="fancyhr section-divider">
+
+            <div class="skills-list">
+                <ul>
+                    <li>
+                        <h3>Programming Languages</h3>
+                        <hr>
+                        <p>Python, R, SQL, Javascript, HTML, CSS</p>
+                    </li>
+                    <li>
+                        <h3>Machine Learning</h3>
+                        <hr>
+                        <p>Scikit-Learn, Pandas, ETL Process, Model Evaluation</p>
+                    </li>
+                    <li>
+                        <h3>Data Analysis and Visualization</h3>
+                        <hr>
+                        <p>Pandas, NumPy, Matplotlib, Seaborn, Power BI, Data Cleaning & Wrangling, Statistical Analysis</p>
+                    </li>
+                    <li>
+                        <h3>Professional</h3>
+                        <hr>
+                        <p>Team Collaboration (Agile & Scrum), Techincal Writing & Reporting, Problem Solving, Communication</p>
+                    </li>
+                    <li>
+                        <h3>Tools and Frameworks</h3>
+                        <hr>
+                        <p>Jupyter Notebook, VS Code, Git & GitHub, MySQL, Excel, Power BI</p>
+                    </li>
+                    <li>
+                        <h3>Place Holder</h3>
+                        <hr>
+                        <p>Skill Placeholder</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects">
+        <div class="projects-container content-wrapper">
+            <h1>Projects</h1>
+            <hr class="fancyhr section-divider">
+            
+            <div class="projects-list">
+                <ul>
+                    <li>
+                        <div class="project-pill">
+                            <img src="Images/statistics-project.jpg">
+                            <div class="project-info">
+                                <h4>COVID-19 Job Vacancy Recovery Analysis (R | Statistics Canada)</h4>
+                                <p>Built statistical models to understand how Canadian job vacancy rates changed before, during, and after the COVID-19 pandemic. Focused on determining when job vacancies returned to pre-COVID levels and how impacts varied by industry.</p>
+                            </div>
+                            <div class="related-skills">
+                                <p>Statistical Modeling, Linear Regression, ANOVA, Tukey HSD, Exploratory Data Analysis (EDA), Forecasting, R Programming, ggplot2</p>
+                            </div>
+                            <button>GitHub</button>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="project-pill">
+                            <img src="Images/placeholder.png">
+                            <h4>Project Title</h4>
+                            <p>Project Description, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus et orci sed commodo. Nam est ligula, blandit eu metus a, ultrices eleifend nibh. Suspendisse nec lacus sodales, dictum nibh venenatis, vestibulum velit. Aliquam erat volutpat. </p>
+                            <hr>
+                            <button>GitHub</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <h1>Liam MacInnis</h1>
+        <h3>Thanks for Visiting!</h3>
+        <div class="footer-socials">
+            <button>LinkedIn</button>
+            <button>Email</button>
+            <button>GitHub</button>
+        </div>
+        <p>&copy; Liam MacInnis. All Rights Reserved.</p>
+    </footer>
+    </body>
+</html>

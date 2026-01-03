@@ -1,0 +1,121 @@
+/* ========================================================== */
+/* ==================== Projects Section ==================== */
+/* ========================================================== */
+section.projects {
+    width: 100%;
+    justify-items: center;
+}
+
+section.projects h1 {
+    padding-top: 1rem;
+    line-height: 50%;
+}
+
+section.projects hr {
+    justify-self: center;
+    width: 130px;
+}
+
+section.projects .projects-container{
+    width: 100%;
+    min-height: 645px;
+
+}
+
+section.projects h1{
+    text-align: center;
+}
+
+section.projects .projects-list ul {
+    all: unset;
+    margin: 0 auto;
+    padding: 0;
+
+
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    /* place-items: center; */
+    justify-items: center;
+    align-items: start;
+
+    
+    gap: 25px;
+}
+
+section.projects .projects-list li {
+    all: unset;
+    margin: 0;
+    padding: 0;
+}
+
+section.projects .projects-list .project-pill {
+    background-color: var(--bg-main);
+
+    border-radius: 25px;
+    border-style: solid;
+    border-color: var(--text-muted);
+    border-width: 1px;
+    overflow: hidden;
+
+    height: 560px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.projects .projects-list .project-pill img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+section.projects .projects-list .project-pill img:hover {
+    transform: scale(1.05) translateY(-4px);
+}
+
+section.projects .projects-list .project-pill .project-info {
+    width: 95%;
+    justify-self: center;
+}
+
+section.projects .projects-list .project-pill .project-info h4 {
+    text-align: left;
+    margin: 0.5rem 0 0 0;
+}
+
+section.projects .projects-list .project-pill .project-info p {
+    text-align: left;
+}
+
+section.projects .projects-list .project-pill .related-skills {
+    width: 95%;
+    justify-self: center;
+}
+
+section.projects .projects-list .project-pill .related-skills p {
+    text-align: justify;
+}
+
+section.projects .projects-list .project-pill button {
+    all: unset;
+
+    font-weight: bold;
+
+    border-radius: 25px;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+
+    transition: transform 0.15s ease;
+
+    color: var(--text-muted);
+    background-color: var(--bg-card);
+    border: solid 3px var(--border-subtle);
+}
+
+section.projects .projects-list .project-pill button:active{
+    transform: scale(0.95);
+}

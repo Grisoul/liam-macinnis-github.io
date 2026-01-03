@@ -1,0 +1,44 @@
+/* ================================================================ */
+/* ==================== Footer Contact Section ==================== */
+/* ================================================================ */
+footer {
+    width: 100%;
+    min-height: 290px;
+    background-color: var(--bg-main);
+
+    justify-items: center;
+
+    border-top: solid 1px var(--text-muted)
+}
+
+footer h1 {
+    padding: 2rem 0 0 0;
+}
+
+footer h3 {
+    color: var(--text-muted);
+}
+
+footer div {
+    padding-bottom: 2rem;
+}
+
+footer div button{
+    all: unset;
+
+    font-weight: bold;
+
+    margin-right: 1rem;
+    border-radius: 25px;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+
+    transition: transform 0.15s ease;
+
+    color: var(--text-muted);
+    background-color: var(--bg-main);
+    border: solid 3px var(--text-muted);
+}
+
+footer div button:active{
+    transform: scale(0.95);
+}

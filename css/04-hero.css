@@ -1,0 +1,139 @@
+/* ====================================================== */
+/* ==================== Hero Section ==================== */
+/* ====================================================== */
+section.hero {
+    width: 100%;
+    padding-top: 6rem;
+}
+
+section.hero .hero-container{
+    width: 100%;
+    min-height: 440px;
+    
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* ======================= Left Hero Section ======================= */
+section.hero .left-hero {
+    width: 50%;
+    margin: auto;
+}
+
+section.hero .left-hero h4 {
+    font-size: 48px;
+    margin: 0;
+
+    color: var(--text-main);
+}
+
+section.hero .left-hero h6 {
+    font-size: 32px;
+    margin: 0 0 2.5rem 0;
+
+    color: var(--text-secondary);
+}
+
+/* Animated Text Section Start */
+section.hero .left-hero h6 span#imatext{
+    color: var(--border-red);
+}
+
+section.hero .left-hero h6 span.cursor {
+    color: var(--text-secondary);
+    font-weight: lighter;
+}
+
+section.hero .left-hero h6 span.cursor.blink {
+    animation: blink 0.75s infinite;
+}
+
+@keyframes blink {
+    0%, 50% {opacity: 1;}
+    50.01%, 100% {opacity: 0;}
+}
+/* Animated Text Section End */
+
+section.hero .left-hero p {
+    margin: 0 0 2.5rem 0;
+    
+    font-size: 22px;
+    text-align: left;
+}
+
+section.hero .left-hero .hero-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+section.hero .left-hero .hero-buttons button{
+    font-weight: bold;
+
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    border-radius: 25px;
+    border-width: 3px;
+    border-style: solid;
+
+    cursor: pointer;
+
+    transition: transform 0.1s ease;
+}
+
+section.hero .left-hero .hero-buttons button:active{
+    transform: scale(0.95);
+}
+
+/* Specify hero button styles and animatinos */
+section.hero .left-hero .hero-buttons button.resume{
+    color: var(--text-main);
+    background-color: var(--btn-dark);
+    border-color: var(--border-red);
+
+    transition: background-color 0.1s ease,
+    border-color 0.1s ease;
+}
+
+section.hero .left-hero .hero-buttons button.github{
+    color: var(--text-main);
+    background-color: var(--border-red);
+    border-color: var(--btn-dark);
+
+    transition: background-color 0.1s ease,
+    border-color 0.1s ease;
+}
+
+/* Animate the two buttons to change colour to opposites of one another */
+section.hero .left-hero .hero-buttons button.resume:active{
+    background-color: var(--border-red);
+    border-color: var(--btn-dark);
+}
+
+section.hero .left-hero .hero-buttons button.github:active{
+    background-color: var(--btn-dark);
+    border-color: var(--border-red);
+}
+
+
+/* ======================= Right Hero Section ======================= */
+section.hero .right-hero {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.hero .right-hero img {
+    height: 440px;
+    width: 360px;   
+
+    border-radius: 60px;
+
+    border: 5px solid transparent; 
+    background: linear-gradient(white, white) padding-box,
+              linear-gradient(to right top, var(--border-red) 25%, var(--border-yellow) 50%, var(--border-red) 75%) border-box;
+}

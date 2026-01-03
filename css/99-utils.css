@@ -1,0 +1,38 @@
+/* =============================================================== */
+/* ======================= General Styling ======================= */
+/* =============================================================== */
+hr.fancyhr {
+    border: none;
+    height: 2px;
+    width: 150px;
+    margin: 1.25rem 0;
+
+    border-radius: 999px;
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        var(--border-red) 25%, 
+        var(--border-yellow) 50%,
+        var(--border-red) 75%,
+        transparent 100%
+        );
+
+    box-shadow: 
+        0 0 12px rgba(255, 180, 80, 0.7),
+        0 0 24px rgba(255, 74, 43, 0.5);
+}
+
+
+span.name-gradient{
+    background-image: linear-gradient(
+        to bottom right,
+        var(--border-red) 40%, 
+        var(--border-yellow) 75%
+        );
+    color: transparent;
+    background-clip: text;
+}
+
+.fancyhr.section-divider {
+    margin-bottom: var(--hr-bottom-margin);
+}
