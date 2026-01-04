@@ -69,7 +69,7 @@ section.hero .left-hero .hero-buttons{
     gap: 1rem;
 }
 
-section.hero .left-hero .hero-buttons button{
+section.hero .left-hero .hero-buttons a{
     font-weight: bold;
 
     padding: 0.5rem 2rem 0.5rem 2rem;
@@ -80,14 +80,19 @@ section.hero .left-hero .hero-buttons button{
     cursor: pointer;
 
     transition: transform 0.1s ease;
+
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
-section.hero .left-hero .hero-buttons button:active{
-    transform: scale(0.95);
+section.hero .left-hero .hero-buttons a:active{
+    transform: scale(0.9);
 }
 
 /* Specify hero button styles and animatinos */
-section.hero .left-hero .hero-buttons button.resume{
+section.hero .left-hero .hero-buttons a.resume{
     color: var(--text-main);
     background-color: var(--btn-dark);
     border-color: var(--border-red);
@@ -96,7 +101,7 @@ section.hero .left-hero .hero-buttons button.resume{
     border-color 0.1s ease;
 }
 
-section.hero .left-hero .hero-buttons button.github{
+section.hero .left-hero .hero-buttons a.github{
     color: var(--text-main);
     background-color: var(--border-red);
     border-color: var(--btn-dark);
@@ -106,12 +111,12 @@ section.hero .left-hero .hero-buttons button.github{
 }
 
 /* Animate the two buttons to change colour to opposites of one another */
-section.hero .left-hero .hero-buttons button.resume:active{
+section.hero .left-hero .hero-buttons a.resume:active{
     background-color: var(--border-red);
     border-color: var(--btn-dark);
 }
 
-section.hero .left-hero .hero-buttons button.github:active{
+section.hero .left-hero .hero-buttons a.github:active{
     background-color: var(--btn-dark);
     border-color: var(--border-red);
 }
