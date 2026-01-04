@@ -23,8 +23,10 @@ footer div {
     padding-bottom: 2rem;
 }
 
-footer div button{
-    all: unset;
+footer div a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
     font-weight: bold;
 
@@ -39,6 +41,14 @@ footer div button{
     border: solid 3px var(--text-muted);
 }
 
-footer div button:active{
-    transform: scale(0.95);
+footer a i {
+  font-size: 1.4rem;
+}
+
+footer div a:hover{
+    transform: scale(1.05);
+}
+
+footer div a:active{
+    transform: scale(0.9);
 }
