@@ -51,7 +51,7 @@ header nav a {
 header nav a:hover,
 header nav a:focus-visible {
     color: var(--text-main);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    /* box-shadow: 0 8px 20px rgba(0,0,0,0.15); */
     transform: translateY(-3px) scale(1.05);
 }
 
@@ -75,9 +75,9 @@ header nav a::after {
         transparent 100%
         );
 
-    box-shadow: 
+    /* box-shadow: 
         0 0 12px rgba(255, 180, 80, 0.7),
-        0 0 24px rgba(255, 74, 43, 0.5);
+        0 0 24px rgba(255, 74, 43, 0.5); */
   
     transform: translateX(-50%) scaleX(0);
     transform-origin: center; 
@@ -90,17 +90,12 @@ header nav a:focus-visible::after  {
     transform: translateX(-50%) scaleX(1);
 }
 
-@media (max-width: 600px) {
-  header {
-    padding: 0 1rem;
-    height: auto;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
+@media (max-width: 800px){
+    header .logo h3 { 
+        display: none; 
+    }
 
-  header nav {
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
+    header nav a{
+        display: none;
+    }
 }

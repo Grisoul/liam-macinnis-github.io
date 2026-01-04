@@ -31,7 +31,10 @@ section.hero .left-hero h4 {
 
 section.hero .left-hero h6 {
     font-size: 32px;
-    margin: 0 0 2.5rem 0;
+    margin: 1rem 0 2.5rem 0;
+
+    line-height: 1.2;
+    min-height: calc(2 * 1.2em);
 
     color: var(--text-secondary);
 }
@@ -145,21 +148,40 @@ section.hero .right-hero img {
 
 
 
-@media (max-width: 900px){
+@media (max-width: 1110px){
     section.hero .hero-container {
-    flex-direction: column;
-    gap: 2rem;
-  }
-    section.hero .left-hero,
-    section.hero .right-hero {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    section.hero .right-hero{
         width: 100%;
-  }
+    }
+
+    section.hero .left-hero h4, 
+    section.hero .left-hero h6, 
+    section.hero .left-hero p {
+        text-align: center;
+    }
+
     section.hero .right-hero img {
         width: min(320px, 90%);
         height: auto;
-  }
+    }
+
+  section.hero .left-hero .hero-buttons{
+        justify-content: center;
+    }
 }
 
 @media (max-width: 600px){
-    
+    section.hero .left-hero h6 {
+        min-height: calc(3 * 1.2em);
+    }
+}
+
+@media (max-width: 480px){
+    section.hero .left-hero h6 {
+        min-height: calc(4 * 1.2em);
+    }
 }
