@@ -119,3 +119,17 @@ section.projects .projects-list .project-pill button {
 section.projects .projects-list .project-pill button:active{
     transform: scale(0.95);
 }
+
+
+
+@media (max-width: 900px) {
+    section.projects .projects-list ul {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    section.projects .projects-list ul {
+        grid-template-columns: 1fr;
+    }
+}

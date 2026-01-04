@@ -142,3 +142,24 @@ section.hero .right-hero img {
     background: linear-gradient(white, white) padding-box,
               linear-gradient(to right top, var(--border-red) 25%, var(--border-yellow) 50%, var(--border-red) 75%) border-box;
 }
+
+
+
+@media (max-width: 900px){
+    section.hero .hero-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+    section.hero .left-hero,
+    section.hero .right-hero {
+        width: 100%;
+  }
+    section.hero .right-hero img {
+        width: min(320px, 90%);
+        height: auto;
+  }
+}
+
+@media (max-width: 600px){
+    
+}

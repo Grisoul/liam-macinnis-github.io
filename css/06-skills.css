@@ -109,3 +109,16 @@ section.skills .skills-list span.material-symbols-outlined{
     font-size: 60px;
     text-align: center;
 }
+
+
+@media (max-width: 900px) {
+    section.skills .skills-list ul {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    section.skills .skills-list ul {
+        column-count: 1;
+    }
+}
