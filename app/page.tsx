@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-// import Header from "@/components/Header/Header";
+import Header from "@/components/Header/Header";
 // import Hero from "@/components/Hero/Hero";
 // import About from "@/components/About/About";
 // import Experience from "@/components/Experience/Experience";
@@ -11,7 +11,7 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <>
-      {/*<Header /> */}
+      <Header />
 
       <main>
         {/*<Hero /> */}
@@ -20,7 +20,7 @@ export default function Home() {
         {/*<Skills /> */}
         {/*<Projects   /> */}
       </main>
-      {/*<Header /> */}
+      {/*<Footer /> */}
     </>
   );
 }

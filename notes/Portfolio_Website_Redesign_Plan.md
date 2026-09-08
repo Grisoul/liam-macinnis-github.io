@@ -69,9 +69,9 @@ Create Next.js project and set up the framework, including the app/page.tsx with
 - [x] Create Next.js Project
 - [x] Set up folder structure as shown above
 - [x] Edit page.tsx and add the structure
-- [ ] Create each component as an empty function
-- [ ] Create skills.ts, projects.ts, and experience.ts, leave them empty for now. Existing data for skills and projects will be migrated
-- [ ] Migrate all images used, not the outdated resume however, will decide later on a good resume to upload
+- [x] Create each component as an empty function
+- [x] Create skills.ts, projects.ts, and experience.ts, leave them empty for now. Existing data for skills and projects will be migrated
+- [x] Migrate all images used, not the outdated resume however, will decide later on a good resume to upload
 - [ ] Migrate global styling
 
 ## Step 2: Header Migration
